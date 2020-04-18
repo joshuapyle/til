@@ -5,7 +5,7 @@
 A collection of concise write-ups on small things I learn day to day across a
 variety of languages and technologies. 
 
-_2 TILs and counting..._
+_3 TILs and counting..._
 
 ---
 
@@ -13,6 +13,7 @@ _2 TILs and counting..._
 
 * [Firefox](#firefox)
 * [Raspberrypi](#raspberrypi)
+* [Sql](#sql)
 
 ---
 
@@ -23,5 +24,9 @@ _2 TILs and counting..._
 ### Raspberrypi
 
 - [SSH -bash somecommand: command not found](raspberrypi/ssh-command-not-found.md)
+
+### Sql
+
+- [SQL Server Pivot](sql/sql-server-pivot.md)
 
 
