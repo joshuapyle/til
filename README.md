@@ -18,10 +18,10 @@ _2 TILs and counting..._
 
 ### Firefox
 
-- [Enable asking Bookmark folder on saving Bookmarks](firefox\enable-folder-selection-on-bookmark-save.md)
+- [Enable asking Bookmark folder on saving Bookmarks](firefox/enable-folder-selection-on-bookmark-save.md)
 
 ### Raspberrypi
 
-- [SSH -bash somecommand: command not found](raspberrypi\ssh-command-not-found.md)
+- [SSH -bash somecommand: command not found](raspberrypi/ssh-command-not-found.md)
 
 
