@@ -1,0 +1,42 @@
+# SQL Server Pivot
+
+[SQL Server Pivot from SQLServer Tutorial.NET](https://www.sqlservertutorial.net/sql-server-basics/sql-server-pivot/)
+
+Final Example using dynamic sql
+
+```
+DECLARE 
+    @columns NVARCHAR(MAX) = '', 
+    @sql     NVARCHAR(MAX) = '';
+
+-- select the category names
+SELECT 
+    @columns+=QUOTENAME(category_name) + ','
+FROM 
+    production.categories
+ORDER BY 
+    category_name;
+
+-- remove the last comma
+SET @columns = LEFT(@columns, LEN(@columns) - 1);
+
+-- construct dynamic SQL
+SET @sql ='
+SELECT * FROM   
+(
+    SELECT 
+        category_name, 
+        model_year,
+        product_id 
+    FROM 
+        production.products p
+        INNER JOIN production.categories c 
+            ON c.category_id = p.category_id
+) t 
+PIVOT(
+    COUNT(product_id) 
+    FOR category_name IN ('+ @columns +')
+) AS pivot_table;';
+
+-- execute the dynamic SQL
+EXECUTE sp_executesql @sql;```
